@@ -1,0 +1,20 @@
+// Adding a background color to a header after the user starts scrolling
+
+1. Add an is-active class to the header element:
+
+.is-active {
+  background-color: $primary;
+}
+
+2. Add the following jQuery:
+
+$(function() {
+    $(window).scroll(function() {
+        if($(window).scrollTop() > headerHeight) {
+            $('header').addClass('is-active');
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $('header').removeClass('is-active');
+        }
+    });
+});
