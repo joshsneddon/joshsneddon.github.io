@@ -61,7 +61,7 @@
 	height: 100%;
 	padding: 9px 0;
 	
-		@media all and (min-width: 34em) {
+		@media all and (min-width: $breakpoint-sml) {
 			display: none;
 		}
 }
@@ -120,7 +120,7 @@
 	margin: 0;
 	list-style: none;
 	
-		@media all and (min-width: 34em) {
+		@media all and (min-width: $breakpoint-sml) {
 			display: inline-block;
 		}
 }

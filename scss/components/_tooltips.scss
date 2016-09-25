@@ -9,7 +9,7 @@
 		&:before,
 		&:after {
 			position: absolute;
-			left: 50%;
+			left: 56%;
 			opacity: 0;
 			z-index: -100;
 		}
@@ -27,7 +27,7 @@
 			border-style: solid;
 			border-width: 0 .75em 1em .75em;
 			border-color: transparent transparent $white transparent;
-			bottom: 40%;
+			bottom: -60%;
 			margin-left: -28%;
 		}
 		
@@ -37,7 +37,7 @@
 			font-weight: 700;
 			background: $white;
 			border-radius: em(2);
-			top: 40%;
+			top: 150%;
 			color: $base-font-color;
 			width: 12em;
 			padding: em(8) em(10);

@@ -9,12 +9,8 @@
 	height: 52px;
 	margin: 0 5px;
 	overflow: hidden;
-	opacity: 0.5;
+	opacity: 1;
 	transition: opacity .2s linear;
-	
-		&:hover {
-			opacity: 1;
-		}
 		
 		&--mail {
 			@extend .icn;
@@ -39,5 +35,13 @@
 		&--codepen {
 			@extend .icn;
 			background-position: 156px 104px;
+		}
+		
+		@media all and (min-width: $breakpoint-med) {
+			opacity: 0.5;
+			
+			&:hover {
+				opacity: 1;
+			}
 		}
 }

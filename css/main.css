@@ -409,9 +409,12 @@ h1, h2, h3, h4 {
   text-transform: uppercase; }
 
 h1 {
-  font-size: 5em;
+  font-size: 3em;
   line-height: 1.1;
   margin: 0.25em 0; }
+  @media all and (min-width: 34em) {
+    h1 {
+      font-size: 5em; } }
 
 h2 {
   font-size: 1.953em;
@@ -798,10 +801,8 @@ header {
   height: 52px;
   margin: 0 5px;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity .2s linear; }
-  .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
-    opacity: 1; }
   .icn--mail {
     background-position: 208px 208px; }
   .icn--twitter {
@@ -812,6 +813,11 @@ header {
     background-position: 52px 104px; }
   .icn--codepen {
     background-position: 156px 104px; }
+  @media all and (min-width: 50em) {
+    .icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--codepen {
+      opacity: 0.5; }
+      .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
+        opacity: 1; } }
 
 .arrow {
   width: 28px;
@@ -822,7 +828,7 @@ header {
   position: relative; }
   .tooltip:before, .tooltip:after {
     position: absolute;
-    left: 50%;
+    left: 56%;
     opacity: 0;
     z-index: -100; }
   .tooltip:hover::before, .tooltip:focus::before, .tooltip:hover::after, .tooltip:focus::after {
@@ -833,7 +839,7 @@ header {
     border-style: solid;
     border-width: 0 .75em 1em .75em;
     border-color: transparent transparent #FFF transparent;
-    bottom: 40%;
+    bottom: -60%;
     margin-left: -28%; }
   .tooltip::after {
     content: attr(data-tip);
@@ -841,7 +847,7 @@ header {
     font-weight: 700;
     background: #FFF;
     border-radius: 0.125em;
-    top: 40%;
+    top: 150%;
     color: #333;
     width: 12em;
     padding: 0.5em 0.625em;
