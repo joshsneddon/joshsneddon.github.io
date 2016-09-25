@@ -12,7 +12,8 @@
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background: rgba(76, 184, 196, 0.96);
+	background: $secondary;
+	opacity: 0.9;
 	z-index: 2;
 	text-align: center;
 	padding: 50% 0;
@@ -43,10 +44,8 @@
 
 .nav-primary-icons {
 	margin-top: 40px;
-	padding: 0 25%;
 	
 		& > a {
-			margin-bottom: 0;
 			opacity: 1;
 		}
 	

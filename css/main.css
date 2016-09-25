@@ -585,7 +585,8 @@ header {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(76, 184, 196, 0.96);
+  background: #000;
+  opacity: 0.9;
   z-index: 2;
   text-align: center;
   padding: 50% 0;
@@ -609,10 +610,8 @@ header {
   text-decoration: none; }
 
 .nav-primary-icons {
-  margin-top: 40px;
-  padding: 0 25%; }
+  margin-top: 40px; }
   .nav-primary-icons > a {
-    margin-bottom: 0;
     opacity: 1; }
 
 .nav-primary-toggle {
@@ -741,12 +740,12 @@ header {
       border-color: #940a0a;
       color: #940a0a; }
     .btn--ghost-secondary {
-      color: #3CD3AD;
-      border-color: #3CD3AD; }
+      color: #000;
+      border-color: #000; }
       .btn--ghost-secondary:active, .btn--ghost-secondary:hover {
         background: none;
-        border-color: #29b391;
-        color: #29b391; }
+        border-color: black;
+        color: black; }
     .btn--ghost-tertiary {
       color: #F15A24;
       border-color: #F15A24; }
@@ -779,8 +778,8 @@ header {
       color: #C40D0D;
       border-bottom: 1px solid #C40D0D; }
     .card__label--secondary {
-      color: #3CD3AD;
-      border-bottom: 1px solid #3CD3AD; }
+      color: #000;
+      border-bottom: 1px solid #000; }
     .card__label--tertiary {
       color: #F15A24;
       border-bottom: 1px solid #F15A24; }
