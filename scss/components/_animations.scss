@@ -1,0 +1,58 @@
+//================================================
+// ANIMATIONS
+//================================================
+
+
+// Typing Text
+
+@keyframes typing {
+	from { width: 0; }
+}
+
+@keyframes typing2 {
+	0% { width: 0; }
+	from { opacity: 0; }
+	1% { opacity: 1; }
+	to { opacity: 1; }
+	100% { opacity: 1; }
+}
+
+%typing {
+	width: 100%;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.typing {
+	@extend %typing;
+	animation: typing 7s steps(60, end);
+}
+
+.typing-para {
+	@extend %typing;
+	opacity: 0;
+	animation: typing2 8s steps(60, end);
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+// Sliding Line
+
+.sliding-line {
+	display: inline-block;
+}
+
+.sliding-line:after {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.sliding-line:hover:after {
+	width: 100%;
+	background: $primary;
+}

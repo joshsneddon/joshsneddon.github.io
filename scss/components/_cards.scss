@@ -1,0 +1,63 @@
+//================================================
+// FLEXBOX CARDS
+//================================================
+
+.card {
+	height: auto;
+	background-color: $white;
+	border: 1px solid darken($grey-light, 5%);
+	margin-bottom: 30px;
+	text-align: left;
+	box-shadow: 0 3px 3px darken($grey-light, 20%);
+	
+		& > img {
+			display: block;
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+		
+		& a[class^="btn"] {
+			font-size: 0.9em;
+		}
+		
+		&__label {
+			display: block;
+			font-size: 0.8em;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 12px 20px;
+			
+			&--primary {
+				@extend .card__label;
+				color: $primary;
+				border-bottom: 1px solid $primary;
+			} 
+			
+			&--secondary {
+				@extend .card__label;
+				color: $secondary;
+				border-bottom: 1px solid $secondary;
+			}
+			
+			&--tertiary {
+				@extend .card__label;
+				color: $tertiary;
+				border-bottom: 1px solid $tertiary;
+			}
+			
+		}
+		
+		@media all and (min-width: 46em) {
+			& {
+				width: 47%;
+				margin: 0 1.5% 30px;
+			}
+		}
+		
+		@media all and (min-width: 66em) {
+			& {
+				width: 30%;
+			}
+		}
+}

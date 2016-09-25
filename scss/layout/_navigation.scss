@@ -1,0 +1,138 @@
+//================================================
+// NAVIGATION
+//================================================
+
+
+// Primary Navigation for smaller screens
+
+.nav-primary {
+	/* by default it's hidden - on top of the viewport */
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(76, 184, 196, 0.96);
+	z-index: 2;
+	text-align: center;
+	padding: 50% 0;
+	margin: 0;
+	backface-visibility: hidden;
+	overflow: auto;
+	/* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+	-webkit-overflow-scrolling: touch;
+	transform: translateY(-110%);
+	transition-property: transform;
+	transition-duration: 0.5s;
+	
+		&.is-visible {
+			transform: translateY(0%);
+		}
+	
+}
+
+.nav-primary li {
+	margin-bottom: 20px;
+}
+
+.nav-primary li a {
+	font-size: 1.563em;
+	color: $white;
+	text-decoration: none;
+}
+
+.nav-primary-icons {
+	margin-top: 40px;
+	padding: 0 25%;
+	
+		& > a {
+			margin-bottom: 0;
+			opacity: 1;
+		}
+	
+}
+
+
+// Menu Icon used to toggle the primary navigation's visibility
+
+.nav-primary-toggle {
+	display: block;
+	float: right;
+	width: 25px;
+	height: 100%;
+	padding: 9px 0;
+	
+		@media all and (min-width: 34em) {
+			display: none;
+		}
+}
+
+.icon-menu {
+	/* these styles set the size and colour of the menu icon */
+	display: block;
+	position: relative;
+	top: 10px;
+	width: 25px;
+	height: 2px;
+	background-color: $white;
+	transition: background-color 0.3s;
+	
+		&.is-clicked {
+			background-color: rgba(255, 255, 255, 0);
+		}
+		
+		&.is-clicked::before {
+			top: 0;
+			transform: rotate(135deg);
+		}
+		
+		&.is-clicked::after {
+			top: 0;
+			transform: rotate(225deg);
+		}
+	
+}
+
+.icon-menu::before,
+.icon-menu::after {
+	@extend %pseudos;
+	width: 100%;
+	height: 100%;
+	background-color: $white;
+	transition: transform .3s, top .3s, background-color 0s;
+}
+
+.icon-menu::before {
+	top: -8px;
+}
+
+.icon-menu::after {
+	top: 8px;
+}
+
+
+// Secondary Navigation for larger screens
+
+.nav-secondary {
+	/* secondary navigation is hidden until the larger screen viewport is activated */
+	display: none;
+	float: right;
+	padding: 7px 0;
+	margin: 0;
+	list-style: none;
+	
+		@media all and (min-width: 34em) {
+			display: inline-block;
+		}
+}
+
+.nav-secondary li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.nav-secondary li a {
+	display: inline-block;	
+	color: $white;
+	text-decoration: none;
+}

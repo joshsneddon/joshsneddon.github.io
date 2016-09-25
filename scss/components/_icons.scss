@@ -1,0 +1,47 @@
+//================================================
+// ICONS
+//================================================
+
+.icn {
+	display: inline-block;
+	background-image: url('#{$path-img}/icons.svg');
+	width: 52px;
+	height: 52px;
+	margin: 0 10px 1.5em 0;
+	overflow: hidden;
+	opacity: 0.5;
+	transition: opacity .2s linear;
+	
+		div > &:last-of-type {
+			margin-right: 0;
+		}
+	
+		&:hover {
+			opacity: 1;
+		}
+		
+		&--mail {
+			@extend .icn;
+			background-position: 208px 208px;
+		}
+		
+		&--twitter {
+			@extend .icn;
+			background-position: 208px 156px;
+		}
+		
+		&--linkedin {
+			@extend .icn;
+			background-position: 208px 104px;
+		}
+		
+		&--treehouse {
+			@extend .icn;
+			background-position: 52px 104px;
+		}
+		
+		&--codepen {
+			@extend .icn;
+			background-position: 156px 104px;
+		}
+}

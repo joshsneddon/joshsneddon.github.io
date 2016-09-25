@@ -1,0 +1,68 @@
+//================================================
+// MIXINS
+//================================================
+
+
+// Web Fonts
+
+@mixin font-face($family, $file) {
+    @font-face {
+	    font-family: $family;
+		src: url('#{$path-font}/#{$file}-webfont.eot');
+		src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+		     url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+			 url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+	}	
+}
+
+
+// Text
+
+@mixin text(
+$family: $base-font-family, 
+$size: $base-font-size, 
+$weight: $base-font-weight, 
+$l-height: $base-l-height, 
+$color: $base-font-color) {
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $l-height;
+	color: $color;
+}
+
+
+// Generating :before or :after pseudo-element shapes
+
+@mixin pseudo-el($el, $el-w: null, $el-h: null) {
+	@if $el == "before" or $el == "after" { 
+		&:#{$el} {
+			@extend %pseudos;
+			width: $el-w;
+			height: $el-h;
+			@content;
+		}
+	} 
+	@else {
+    	@error "`#{$el}` is not a valid pseudo-element.";
+	}
+}
+
+// Image replacement
+
+@mixin img-replace($img, $w, $h, $disp: block) {
+	background-image: url('#{$path--img}/#{$img}');
+	background-repeat: no-repeat;
+	width: $w;
+	height: $h;
+	display: $disp;
+}
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+		margin-left: $margin;
+		@content;
+	}
+}

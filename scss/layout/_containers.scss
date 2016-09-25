@@ -1,0 +1,71 @@
+//================================================
+// CONTAINERS
+//================================================
+
+.container {
+	height: 100%;
+	padding: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.container--text {
+	@extend .container;
+	max-width: 37.5em;
+}
+
+.container--hero {
+	position: relative;
+	height: 1000px;
+	height: 100vh;
+	z-index: 1;
+	background: $primary url('../img/hero-img.jpg') no-repeat center;
+	background-size: cover;
+	color: $white;
+}
+
+.container--hero--text {
+	padding: 20px 30px;
+	background-color: rgba(0, 0, 0, 0.8);
+	
+		& > h1 {
+			color: $primary;
+		}
+}
+
+.container--scroll {
+	bottom: 30px;
+	left: 50%;
+	text-align: center;
+	
+		& > p {
+			font-size: 0.64em;
+			margin-bottom: 10px;
+		}
+}
+
+.container--card {
+	padding: 0 20px;
+}
+
+// Flexbox Containers
+
+.container--flex-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.flex-center-vertically {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.flex-bottom-vertically {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}

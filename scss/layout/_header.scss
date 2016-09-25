@@ -1,0 +1,32 @@
+//================================================
+// HEADER
+//================================================
+
+header {
+	@extend %clearfix;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	padding: 10px 20px;
+	z-index: 3;
+	background-color: $black;
+}
+
+.logo {
+	float: left;
+	height: 100%;
+}
+
+.logo-icon {
+	fill: $primary;
+}
+
+.logo-type {
+	fill: $white;
+}
+
+.logo img {
+	width: auto;
+	height: 40px;
+}
