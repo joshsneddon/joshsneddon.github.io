@@ -480,6 +480,9 @@ footer {
 .container--card {
   padding: 0 20px; }
 
+.container--icn {
+  margin-bottom: 1.5em; }
+
 .container--flex-grid {
   display: flex;
   flex-wrap: wrap;
