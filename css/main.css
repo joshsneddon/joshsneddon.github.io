@@ -794,12 +794,10 @@ header {
   background-image: url("../img/icons.svg");
   width: 52px;
   height: 52px;
-  margin: 0 10px 1.5em 0;
+  margin: 0 5px;
   overflow: hidden;
   opacity: 0.5;
   transition: opacity .2s linear; }
-  div > .icn:last-of-type, div > .icn--mail:last-of-type, div > .icn--twitter:last-of-type, div > .icn--linkedin:last-of-type, div > .icn--treehouse:last-of-type, div > .icn--codepen:last-of-type {
-    margin-right: 0; }
   .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
     opacity: 1; }
   .icn--mail {
