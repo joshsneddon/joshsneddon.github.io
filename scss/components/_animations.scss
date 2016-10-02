@@ -1,43 +1,9 @@
 //================================================
-// ANIMATIONS
+// CUSTOM ANIMATIONS
 //================================================
 
 
-// Typing Text
-
-@keyframes typing {
-	from { width: 0; }
-}
-
-@keyframes typing2 {
-	0% { width: 0; }
-	from { opacity: 0; }
-	1% { opacity: 1; }
-	to { opacity: 1; }
-	100% { opacity: 1; }
-}
-
-%typing {
-	width: 100%;
-	display: inline-block;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.typing {
-	@extend %typing;
-	animation: typing 7s steps(60, end);
-}
-
-.typing-para {
-	@extend %typing;
-	opacity: 0;
-	animation: typing2 8s steps(60, end);
-	animation-delay: 1.5s;
-	animation-fill-mode: forwards;
-}
-
-// Sliding Line
+// Sliding Line animation used for the header links
 
 .sliding-line {
 	display: inline-block;

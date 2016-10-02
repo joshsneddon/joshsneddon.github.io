@@ -678,35 +678,6 @@ header {
   color: #FFF;
   text-decoration: none; }
 
-@keyframes typing {
-  from {
-    width: 0; } }
-@keyframes typing2 {
-  0% {
-    width: 0; }
-  from {
-    opacity: 0; }
-  1% {
-    opacity: 1; }
-  to {
-    opacity: 1; }
-  100% {
-    opacity: 1; } }
-.typing, .typing-para {
-  width: 100%;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.typing {
-  animation: typing 7s steps(60, end); }
-
-.typing-para {
-  opacity: 0;
-  animation: typing2 8s steps(60, end);
-  animation-delay: 1.5s;
-  animation-fill-mode: forwards; }
-
 .sliding-line {
   display: inline-block; }
 
