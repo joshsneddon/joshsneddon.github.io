@@ -13,6 +13,7 @@
 	transition: background .2s linear;
 	
 		&:active,
+		&:focus,
 		&:hover {
 			background: $primary-shade;
 		}
@@ -25,6 +26,7 @@
 			transition: background, color .2s linear;
 			
 				&:active,
+				&:focus,
 				&:hover {
 					background: none;
 					border-color: $primary-shade;

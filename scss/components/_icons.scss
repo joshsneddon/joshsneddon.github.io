@@ -40,6 +40,8 @@
 		@media all and (min-width: $breakpoint-med) {
 			opacity: 0.5;
 			
+			&:active,
+			&:focus,
 			&:hover {
 				opacity: 1;
 			}
