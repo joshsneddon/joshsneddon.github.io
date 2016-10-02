@@ -19,7 +19,7 @@
 	height: 1000px;
 	height: 100vh;
 	z-index: 1;
-	background: $primary url('../img/hero-img.jpg') no-repeat center;
+	background: url('../img/hero-img.jpg') no-repeat center;
 	background-size: cover;
 	color: $white;
 }
@@ -30,6 +30,13 @@
 	
 		& > h1 {
 			color: $primary;
+		}
+		
+		@media all and (min-width: 46em) {
+			
+			& > p {
+				font-size: 1.125em;
+			}	
 		}
 }
 
