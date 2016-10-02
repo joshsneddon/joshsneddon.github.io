@@ -461,7 +461,7 @@ footer {
   height: 1000px;
   height: 100vh;
   z-index: 1;
-  background: #C40D0D url("../img/hero-img.jpg") no-repeat center;
+  background: url("../img/hero-img.jpg") no-repeat center;
   background-size: cover;
   color: #FFF; }
 
@@ -470,6 +470,9 @@ footer {
   background-color: rgba(0, 0, 0, 0.8); }
   .container--hero--text > h1 {
     color: #C40D0D; }
+  @media all and (min-width: 46em) {
+    .container--hero--text > p {
+      font-size: 1.125em; } }
 
 .container--scroll {
   bottom: 30px;
@@ -679,6 +682,66 @@ header {
   color: #FFF;
   text-decoration: none; }
 
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown; }
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp; }
+
 .sliding-line {
   display: inline-block; }
 
@@ -703,14 +766,14 @@ header {
   color: #FFF;
   text-decoration: none;
   transition: background .2s linear; }
-  .btn:active, .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn:hover, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
+  .btn:active, .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn:focus, .btn--ghost:focus, .btn--ghost-secondary:focus, .btn--ghost-tertiary:focus, .btn:hover, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
     background: #940a0a; }
   .btn--ghost, .btn--ghost-secondary, .btn--ghost-tertiary {
     color: #C40D0D;
     background: none;
     border: 2px solid #C40D0D;
     transition: background, color .2s linear; }
-    .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
+    .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn--ghost:focus, .btn--ghost-secondary:focus, .btn--ghost-tertiary:focus, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
       background: none;
       border-color: #940a0a;
       color: #940a0a; }
@@ -788,7 +851,7 @@ header {
   @media all and (min-width: 50em) {
     .icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--codepen {
       opacity: 0.5; }
-      .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
+      .icn:active, .icn--mail:active, .icn--twitter:active, .icn--linkedin:active, .icn--treehouse:active, .icn--codepen:active, .icn:focus, .icn--mail:focus, .icn--twitter:focus, .icn--linkedin:focus, .icn--treehouse:focus, .icn--codepen:focus, .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
         opacity: 1; } }
 
 .arrow {
