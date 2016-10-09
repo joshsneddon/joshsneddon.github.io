@@ -21,9 +21,9 @@
 	z-index: 1;
 	background: 
 		linear-gradient( 0deg, $white 20%, transparent),
-		url('../img/hero-img2.jpg') no-repeat center
+		url('../img/hero-img2.png') no-repeat center $white
 	;
-	background-size: cover;
+	background-size: auto 100%;
 	color: $white;
 }
 
