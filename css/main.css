@@ -561,18 +561,15 @@ header {
   width: 100%;
   height: 60px;
   padding: 10px 20px;
-  z-index: 3;
-  background-color: #000; }
+  z-index: 3; }
 
 .logo {
   float: left;
   height: 100%; }
 
+.logo-type,
 .logo-icon {
-  fill: #C40D0D; }
-
-.logo-type {
-  fill: #FFF; }
+  fill: #000; }
 
 .logo img {
   width: auto;
@@ -672,7 +669,7 @@ header {
 
 .nav-secondary li a {
   display: inline-block;
-  color: #FFF;
+  color: #000;
   text-decoration: none; }
 
 .animated {

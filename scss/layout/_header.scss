@@ -10,7 +10,6 @@ header {
 	height: 60px;
 	padding: 10px 20px;
 	z-index: 3;
-	background-color: $black;
 }
 
 .logo {
@@ -18,12 +17,9 @@ header {
 	height: 100%;
 }
 
+.logo-type,
 .logo-icon {
-	fill: $primary;
-}
-
-.logo-type {
-	fill: $white;
+	fill: $black;
 }
 
 .logo img {
