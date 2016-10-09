@@ -10,6 +10,11 @@ header {
 	height: 60px;
 	padding: 10px 20px;
 	z-index: 3;
+	transition: background-color .2s ease-in-out; 
+	
+	&.is-active {
+	  background-color: $secondary;
+	}
 }
 
 .logo {
@@ -20,6 +25,10 @@ header {
 .logo-type,
 .logo-icon {
 	fill: $black;
+	
+	.is-active & {
+		fill: $white;
+	}
 }
 
 .logo img {

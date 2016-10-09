@@ -43,10 +43,11 @@ $(function() {
 $(function() {
     $(window).scroll(function() {
         if($(window).scrollTop() > headerHeight) {
-            $('header').addClass('is-active');
+			$('header').removeClass('animated slideInDown');
+        	$('header').addClass('animated--fast slideInDown is-active');
         } else {
-            //remove the background property so it comes transparent again (defined in your css)
-           $('header').removeClass('is-active');
+           //remove the background property so it comes transparent again (defined in your css)
+        	$('header').removeClass('animated--fast slideInDown is-active');
         }
     });
 });

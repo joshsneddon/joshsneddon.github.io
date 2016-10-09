@@ -561,7 +561,10 @@ header {
   width: 100%;
   height: 60px;
   padding: 10px 20px;
-  z-index: 3; }
+  z-index: 3;
+  transition: background-color .2s ease-in-out; }
+  header.is-active {
+    background-color: #000; }
 
 .logo {
   float: left;
@@ -570,6 +573,9 @@ header {
 .logo-type,
 .logo-icon {
   fill: #000; }
+  .is-active .logo-type, .is-active
+  .logo-icon {
+    fill: #FFF; }
 
 .logo img {
   width: auto;
@@ -671,10 +677,18 @@ header {
   display: inline-block;
   color: #000;
   text-decoration: none; }
+  .is-active .nav-secondary li a {
+    color: #FFF; }
 
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated--fast {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 

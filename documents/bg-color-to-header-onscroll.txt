@@ -13,7 +13,7 @@ $(function() {
         if($(window).scrollTop() > headerHeight) {
             $('header').addClass('is-active');
         } else {
-            //remove the background property so it comes transparent again (defined in your css)
+            //remove the background property so it becomes transparent again (defined in your css)
            $('header').removeClass('is-active');
         }
     });
