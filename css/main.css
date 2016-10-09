@@ -475,11 +475,6 @@ footer {
     .container--hero--text > p {
       font-size: 1.125em; } }
 
-.container--scroll {
-  bottom: 30px;
-  left: 50%;
-  text-align: center; }
-
 .container--card {
   padding: 0 20px; }
   .container--card > h3 {
@@ -853,8 +848,14 @@ header {
         opacity: 1; } }
 
 .arrow {
+  display: block;
+  margin: 0 auto 10px;
   width: 28px;
-  height: 15px; }
+  height: 28px;
+  background: url(../img/arrow.svg) no-repeat center;
+  background-size: 18px;
+  border: 2px solid #C40D0D;
+  border-radius: 50%; }
 
 .tooltip {
   cursor: pointer;

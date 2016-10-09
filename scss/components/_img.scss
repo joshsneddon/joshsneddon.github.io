@@ -3,6 +3,12 @@
 //================================================
 
 .arrow {
-	width: 28px;
-	height: 15px;
+	display: block;
+    margin: 0 auto 10px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/arrow.svg) no-repeat center;
+    background-size: 18px;
+	border: 2px solid $primary;
+    border-radius: 50%;
 }
