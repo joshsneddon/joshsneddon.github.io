@@ -461,15 +461,16 @@ footer {
   height: 1000px;
   height: 100vh;
   z-index: 1;
-  background: url("../img/hero-img.jpg") no-repeat center;
+  background: linear-gradient(0deg, #FFF 20%, transparent), url("../img/hero-img2.jpg") no-repeat center;
   background-size: cover;
   color: #FFF; }
 
 .container--hero--text {
-  padding: 20px 30px;
-  background-color: rgba(0, 0, 0, 0.8); }
+  padding: 20px 30px; }
   .container--hero--text > h1 {
     color: #C40D0D; }
+  .container--hero--text > p {
+    color: #000; }
   @media all and (min-width: 46em) {
     .container--hero--text > p {
       font-size: 1.125em; } }
@@ -478,9 +479,6 @@ footer {
   bottom: 30px;
   left: 50%;
   text-align: center; }
-  .container--scroll > p {
-    font-size: 0.64em;
-    margin-bottom: 10px; }
 
 .container--card {
   padding: 0 20px; }

@@ -19,17 +19,23 @@
 	height: 1000px;
 	height: 100vh;
 	z-index: 1;
-	background: url('../img/hero-img.jpg') no-repeat center;
+	background: 
+		linear-gradient( 0deg, $white 20%, transparent),
+		url('../img/hero-img2.jpg') no-repeat center
+	;
 	background-size: cover;
 	color: $white;
 }
 
 .container--hero--text {
 	padding: 20px 30px;
-	background-color: rgba(0, 0, 0, 0.8);
 	
 		& > h1 {
 			color: $primary;
+		}
+		
+		& > p {
+			color: $black;
 		}
 		
 		@media all and (min-width: 46em) {
@@ -44,11 +50,6 @@
 	bottom: 30px;
 	left: 50%;
 	text-align: center;
-	
-		& > p {
-			font-size: 0.64em;
-			margin-bottom: 10px;
-		}
 }
 
 .container--card {
