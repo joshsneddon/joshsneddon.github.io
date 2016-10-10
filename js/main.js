@@ -1,35 +1,24 @@
 var headerHeight = $('header').height(); 
 
-// Reveal/Hide Primary Navigation
-$('#navToggle').click(function() {
-	$('#navIcon').toggleClass('is-clicked');
-	$('#navReveal').toggleClass('is-visible');
-	
-	if ( $(window).scrollTop() < headerHeight ) {
-		$('header').toggleClass('is-active');
-	} else {
-		return false;
-	}
+// Scroll position reset after refresh
+$(document).ready(function() {
+	$(window).scrollTop(0);
 });
 
-// Hides Primary Navigation when a link is clicked
-$('#navReveal li a').click(function() {
-	$('#navIcon').removeClass('is-clicked');
-	$('#navReveal').removeClass('is-visible');
-});
-
-// Page scrolls to first section when 'scrollDownArrow' is clicked
+// A background color is appled to the header when the user starts scrolling
 $(function() {
-	$('#scrollDownArrow').click(function() {
-		// The selector is the first section and the fixed header height is subtracted
-		$('html, body').animate({
-			scrollTop: $('#about').offset().top - 60
-		}, 750);
-		return false;
-	});
+    $(window).scroll(function() {
+        if($(window).scrollTop() > headerHeight) {
+			$('header').removeClass('animated slideInDown');
+        	$('header').addClass('animated--fast slideInDown is-active');
+        } else {
+           //remove the background property so it comes transparent again (defined in your css)
+        	$('header').removeClass('animated--fast slideInDown is-active');
+        }
+    });
 });
 
-// Smooth page scrolling
+// Smooth page scrolling after link is clicked
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -45,15 +34,32 @@ $(function() {
   });
 });
 
-// A background color is appled to the header when the user starts scrolling
+// Page scrolls to first section when 'scrollDownArrow' is clicked
 $(function() {
-    $(window).scroll(function() {
-        if($(window).scrollTop() > headerHeight) {
-			$('header').removeClass('animated slideInDown');
-        	$('header').addClass('animated--fast slideInDown is-active');
-        } else {
-           //remove the background property so it comes transparent again (defined in your css)
-        	$('header').removeClass('animated--fast slideInDown is-active');
-        }
-    });
+	$('#scrollDownArrow').click(function() {
+		// The selector is the first section and the fixed header height is subtracted
+		$('html, body').animate({
+			scrollTop: $('#about').offset().top - 60
+		}, 750);
+		return false;
+	});
+});
+
+// Reveal/Hide Primary Navigation
+$('#navToggle').click(function() {
+	$('#navIcon').toggleClass('is-clicked');
+	$('#navReveal').toggleClass('is-visible');
+	
+	// Applies the is-active class to the header if the user toggles the nav at the top of the page
+	if ( $(window).scrollTop() < headerHeight ) {
+		$('header').toggleClass('is-active');
+	} else {
+		return false;
+	}
+});
+
+// Hides Primary Navigation when a link is clicked
+$('#navReveal li a').click(function() {
+	$('#navIcon').removeClass('is-clicked');
+	$('#navReveal').removeClass('is-visible');
 });
