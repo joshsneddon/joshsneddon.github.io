@@ -4,7 +4,12 @@ var headerHeight = $('header').height();
 $('#navToggle').click(function() {
 	$('#navIcon').toggleClass('is-clicked');
 	$('#navReveal').toggleClass('is-visible');
-	$('header').toggleClass('is-active')
+	
+	if ($('header').hasClass('is-active')) {
+		return true;
+	} else {
+		$('header').toggleClass('is-active');
+	}
 });
 
 // Hides Primary Navigation when a link is clicked
