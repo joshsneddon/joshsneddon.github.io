@@ -659,6 +659,9 @@ header {
 .icon-menu::after {
   top: 8px; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .nav-secondary {
   /* secondary navigation is hidden until the larger screen viewport is activated */
   display: none;

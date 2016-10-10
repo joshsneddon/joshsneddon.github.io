@@ -109,6 +109,11 @@
 	top: 8px;
 }
 
+// Prevents the body from scrolling when the primary nav is active
+.no-scroll {
+	overflow: hidden;	
+}
+
 
 // Secondary Navigation for larger screens
 

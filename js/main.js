@@ -47,6 +47,7 @@ $(function() {
 
 // Reveal/Hide Primary Navigation
 $('#navToggle').click(function() {
+	$('body').toggleClass('no-scroll');
 	$('#navIcon').toggleClass('is-clicked');
 	$('#navReveal').toggleClass('is-visible');
 	
@@ -60,6 +61,7 @@ $('#navToggle').click(function() {
 
 // Hides Primary Navigation when a link is clicked
 $('#navReveal li a').click(function() {
+	$('body').removeClass('no-scroll');
 	$('#navIcon').removeClass('is-clicked');
 	$('#navReveal').removeClass('is-visible');
 });
