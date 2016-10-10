@@ -5,10 +5,10 @@ $('#navToggle').click(function() {
 	$('#navIcon').toggleClass('is-clicked');
 	$('#navReveal').toggleClass('is-visible');
 	
-	if ($('header').hasClass('is-active')) {
-		return true;
-	} else {
+	if ( $(window).scrollTop() < headerHeight ) {
 		$('header').toggleClass('is-active');
+	} else {
+		return false;
 	}
 });
 
