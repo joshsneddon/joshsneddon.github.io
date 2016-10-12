@@ -8,6 +8,7 @@
 			
 		&:before,
 		&:after {
+			display: none;
 			position: absolute;
 			left: 56%;
 			opacity: 0;
@@ -42,6 +43,14 @@
 			width: 12em;
 			padding: em(8) em(10);
 			margin-left: -6.5em;
+		}
+		
+		// Displays tooltips at desktop screen widths, they are hidden on mobile/tablet
+		@media all and (min-width: $breakpoint-med) {
+				&:before,
+				&:after {
+				display: block;
+			}
 		}
 	
 }
