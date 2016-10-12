@@ -32,17 +32,25 @@
 			background-position: 52px 104px;
 		}
 		
+		&--github {
+			@extend .icn;
+			background-position: 104px 104px;
+		}
+		
 		&--codepen {
 			@extend .icn;
 			background-position: 156px 104px;
 		}
 		
 		@media all and (min-width: $breakpoint-med) {
-			opacity: 0.5;
+			&,
+			&:visited {
+				opacity: 0.5;
+			}
 			
-			&:active,
+			&:hover,
 			&:focus,
-			&:hover {
+			&:active {
 				opacity: 1;
 			}
 		}

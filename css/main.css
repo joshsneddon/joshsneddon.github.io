@@ -837,7 +837,7 @@ header {
     .card {
       width: 30%; } }
 
-.icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--codepen {
+.icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--github, .icn--codepen {
   display: inline-block;
   background-image: url("../img/icons.svg");
   width: 52px;
@@ -854,13 +854,15 @@ header {
     background-position: 208px 104px; }
   .icn--treehouse {
     background-position: 52px 104px; }
+  .icn--github {
+    background-position: 104px 104px; }
   .icn--codepen {
     background-position: 156px 104px; }
   @media all and (min-width: 50em) {
-    .icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--codepen {
+    .icn, .icn--mail, .icn--twitter, .icn--linkedin, .icn--treehouse, .icn--github, .icn--codepen, .icn:visited, .icn--mail:visited, .icn--twitter:visited, .icn--linkedin:visited, .icn--treehouse:visited, .icn--github:visited, .icn--codepen:visited {
       opacity: 0.5; }
-      .icn:active, .icn--mail:active, .icn--twitter:active, .icn--linkedin:active, .icn--treehouse:active, .icn--codepen:active, .icn:focus, .icn--mail:focus, .icn--twitter:focus, .icn--linkedin:focus, .icn--treehouse:focus, .icn--codepen:focus, .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--codepen:hover {
-        opacity: 1; } }
+    .icn:hover, .icn--mail:hover, .icn--twitter:hover, .icn--linkedin:hover, .icn--treehouse:hover, .icn--github:hover, .icn--codepen:hover, .icn:focus, .icn--mail:focus, .icn--twitter:focus, .icn--linkedin:focus, .icn--treehouse:focus, .icn--github:focus, .icn--codepen:focus, .icn:active, .icn--mail:active, .icn--twitter:active, .icn--linkedin:active, .icn--treehouse:active, .icn--github:active, .icn--codepen:active {
+      opacity: 1; } }
 
 .arrow {
   display: block;
