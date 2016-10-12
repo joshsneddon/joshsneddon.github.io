@@ -390,6 +390,11 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+/* Removes bullets from li elements */
+ul,
+li {
+  list-style: none; }
+
 *, :before, :after {
   box-sizing: border-box; }
 

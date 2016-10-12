@@ -421,3 +421,10 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
+
+/* Removes bullets from li elements */
+
+ul,
+li {
+	list-style: none;
+}
