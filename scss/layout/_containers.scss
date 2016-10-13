@@ -20,8 +20,12 @@
 	height: 100vh;
 	z-index: 1;
 	background: 
+		-webkit-linear-gradient( bottom, $white 20%, transparent),
+		url('../img/hero-img.png') no-repeat center $white
+	;
+	background: 
 		linear-gradient( 0deg, $white 20%, transparent),
-		url('../img/hero-img2.png') no-repeat center $white
+		url('../img/hero-img.png') no-repeat center $white
 	;
 	background-size: auto 100%;
 	color: $white;
@@ -61,21 +65,26 @@
 // Flexbox Containers
 
 .container--flex-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	-ms-flex-wrap: wrap;
+    	flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+    	justify-content: space-around;
 	max-width: 1280px;
 	margin: 0 auto;
 }
 
-.flex-center-vertically {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .flex-bottom-vertically {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+        flex-direction: column;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+        justify-content: flex-end;
 }

@@ -466,7 +466,8 @@ footer {
   height: 1000px;
   height: 100vh;
   z-index: 1;
-  background: linear-gradient(0deg, #FFF 20%, transparent), url("../img/hero-img2.png") no-repeat center #FFF;
+  background: -webkit-linear-gradient(bottom, #FFF 20%, transparent), url("../img/hero-img.png") no-repeat center #FFF;
+  background: linear-gradient(0deg, #FFF 20%, transparent), url("../img/hero-img.png") no-repeat center #FFF;
   background-size: auto 100%;
   color: #FFF; }
 
@@ -489,20 +490,26 @@ footer {
   margin-bottom: 1.5em; }
 
 .container--flex-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   max-width: 1280px;
   margin: 0 auto; }
 
-.flex-center-vertically {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
 .flex-bottom-vertically {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end; }
 
 .grid {
@@ -567,6 +574,7 @@ header {
   height: 60px;
   padding: 10px 20px;
   z-index: 3;
+  -webkit-transition: background-color .2s ease-in-out;
   transition: background-color .2s ease-in-out; }
   header.is-active {
     background-color: #000; }
@@ -576,11 +584,17 @@ header {
   height: 100%; }
 
 .logo-icon {
+  -webkit-fill: #C40D0D;
+  -moz-fill: #C40D0D;
   fill: #C40D0D; }
 
 .logo-type {
+  -webkit-fill: #000;
+  -moz-fill: #000;
   fill: #000; }
   .is-active .logo-type {
+    -webkit-fill: #FFF;
+    -moz-fill: #FFF;
     fill: #FFF; }
 
 .logo img {
@@ -600,14 +614,21 @@ header {
   text-align: center;
   padding: 50% 0;
   margin: 0;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-110%);
   transform: translateY(-110%);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s; }
   .nav-primary.is-visible {
+    -webkit-transform: translateY(0%);
     transform: translateY(0%); }
 
 .nav-primary li {
@@ -641,14 +662,17 @@ header {
   width: 25px;
   height: 2px;
   background-color: #C40D0D;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s; }
   .icon-menu.is-clicked {
     background-color: rgba(255, 255, 255, 0); }
   .icon-menu.is-clicked::before {
     top: 0;
+    -webkit-transform: rotate(135deg);
     transform: rotate(135deg); }
   .icon-menu.is-clicked::after {
     top: 0;
+    -webkit-transform: rotate(225deg);
     transform: rotate(225deg); }
 
 .icon-menu::before,
@@ -656,6 +680,7 @@ header {
   width: 100%;
   height: 100%;
   background-color: #C40D0D;
+  -webkit-transition: transform .3s, top .3s, background-color 0s;
   transition: transform .3s, top .3s, background-color 0s; }
 
 .icon-menu::before {
@@ -764,6 +789,7 @@ header {
   height: 2px;
   width: 0;
   background: transparent;
+  -webkit-transition: width .5s ease, background-color .5s ease;
   transition: width .5s ease, background-color .5s ease; }
 
 .sliding-line:hover:after {
@@ -778,6 +804,7 @@ header {
   border-radius: 2em;
   color: #FFF;
   text-decoration: none;
+  -webkit-transition: background .2s linear;
   transition: background .2s linear; }
   .btn:active, .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn:focus, .btn--ghost:focus, .btn--ghost-secondary:focus, .btn--ghost-tertiary:focus, .btn:hover, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
     background: #940a0a; }
@@ -785,6 +812,7 @@ header {
     color: #C40D0D;
     background: none;
     border: 2px solid #C40D0D;
+    -webkit-transition: background, color .2s linear;
     transition: background, color .2s linear; }
     .btn--ghost:active, .btn--ghost-secondary:active, .btn--ghost-tertiary:active, .btn--ghost:focus, .btn--ghost-secondary:focus, .btn--ghost-tertiary:focus, .btn--ghost:hover, .btn--ghost-secondary:hover, .btn--ghost-tertiary:hover {
       background: none;
@@ -850,6 +878,7 @@ header {
   margin: 0 5px;
   overflow: hidden;
   opacity: 1;
+  -webkit-transition: opacity .2s linear;
   transition: opacity .2s linear; }
   .icn--mail {
     background-position: 208px 208px; }

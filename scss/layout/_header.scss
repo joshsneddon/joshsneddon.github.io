@@ -10,7 +10,8 @@ header {
 	height: 60px;
 	padding: 10px 20px;
 	z-index: 3;
-	transition: background-color .2s ease-in-out; 
+	-webkit-transition: background-color .2s ease-in-out;
+			transition: background-color .2s ease-in-out; 
 	
 	&.is-active {
 	  background-color: $secondary;
@@ -23,14 +24,20 @@ header {
 }
 
 .logo-icon {
-	fill: $primary;
+	-webkit-fill: $primary;
+	   -moz-fill: $primary;
+		    fill: $primary;
 }
 
 .logo-type {
-	fill: $secondary;
+	-webkit-fill: $secondary;
+	   -moz-fill: $secondary;
+	        fill: $secondary;
 	
 	.is-active & {
-		fill: $white;
+	-webkit-fill: $white;
+	   -moz-fill: $white;
+	        fill: $white;
 	}
 }
 

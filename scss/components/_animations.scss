@@ -120,7 +120,8 @@
 	height: 2px;
 	width: 0;
 	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
+	-webkit-transition: width .5s ease, background-color .5s ease;
+	        transition: width .5s ease, background-color .5s ease;
 }
 
 .sliding-line:hover:after {

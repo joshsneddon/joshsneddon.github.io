@@ -10,7 +10,8 @@
 	border-radius: 2em;
 	color: $white;
 	text-decoration: none;
-	transition: background .2s linear;
+	-webkit-transition: background .2s linear;
+			transition: background .2s linear;
 	
 		&:active,
 		&:focus,
@@ -23,7 +24,8 @@
 			color: $primary;
 			background: none;
 			border: 2px solid $primary;
-			transition: background, color .2s linear;
+			-webkit-transition: background, color .2s linear;
+					transition: background, color .2s linear;
 			
 				&:active,
 				&:focus,
