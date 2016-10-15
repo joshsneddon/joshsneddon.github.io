@@ -5,10 +5,6 @@
 
 // Colors
 
-$fountain-blue      : #4CB8C4;
-$shamrock           : #3CD3AD;
-$flamingo           : #F15A24;
-
 $white           : #FFF;
 $grey-light      : #F2F2F2;
 $grey            : #555;
@@ -18,8 +14,6 @@ $primary         : #C40D0D;
 $primary-shade   : darken($primary, 10%);
 $secondary       : $black;
 $secondary-shade : darken($secondary, 10%);
-$tertiary        : $flamingo;
-$tertiary-shade  : darken($tertiary, 10%);
 
 // Font Stacks
 
@@ -38,13 +32,6 @@ $base-font-color  : $grey-dark;
 
 $path-img         : '../img';
 $path-font        : '../fonts';
-
-// Grid Layout
-
-$grid__col--width    : 65px;
-$grid__col--count    : 12;
-$grid__gutter--width : 20px;
-$grid__cont--max-w   : 1050px;
 
 // Media Query Breakpoints 
 
