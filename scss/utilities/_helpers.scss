@@ -26,24 +26,10 @@
 	width: 1px;
 }
 
-// Center Aligned Text
-
-%center-align {
-	text-align: center;
-}
-
 // Pseudo-Elements
 
 %pseudos {
 	display: block;
 	content: ''; 
 	position: absolute;
-}
-
-// Centered Elements
-
-.centered {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
 }
