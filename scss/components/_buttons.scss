@@ -33,32 +33,6 @@
 					background: none;
 					border-color: $primary-shade;
 					color: $primary-shade;
-				}
-			
-			&-secondary {
-				@extend .btn--ghost;
-				color: $secondary;
-				border-color: $secondary;
-				
-					&:active,
-					&:hover {
-						background: none;
-						border-color: $secondary-shade;
-						color: $secondary-shade;
-					}
-			}	
-			
-			&-tertiary {
-				@extend .btn--ghost;
-				color: $tertiary;
-				border-color: $tertiary;
-				
-					&:active,
-					&:hover {
-						background: none;
-						border-color: $tertiary-shade;
-						color: $tertiary-shade;
-					}
-			}	
+				}	
 		}	
 }

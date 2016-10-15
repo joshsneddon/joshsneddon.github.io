@@ -32,20 +32,7 @@
 				@extend .card__label;
 				color: $primary;
 				border-bottom: 1px solid $primary;
-			} 
-			
-			&--secondary {
-				@extend .card__label;
-				color: $secondary;
-				border-bottom: 1px solid $secondary;
 			}
-			
-			&--tertiary {
-				@extend .card__label;
-				color: $tertiary;
-				border-bottom: 1px solid $tertiary;
-			}
-			
 		}
 		
 		@media all and (min-width: 46em) {
