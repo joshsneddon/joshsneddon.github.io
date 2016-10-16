@@ -21,14 +21,37 @@
 	z-index: 1;
 	background: 
 		-webkit-linear-gradient( bottom, $white 20%, transparent),
-		url('../img/hero-img.png') no-repeat center $white
+		url('#{$path-img}/hero.jpg') no-repeat center/auto 100% $white
 	;
 	background: 
 		linear-gradient( 0deg, $white 20%, transparent),
-		url('../img/hero-img.png') no-repeat center $white
+		url('#{$path-img}/hero.jpg') no-repeat center/auto 100% $white
 	;
-	background-size: auto 100%;
 	color: $white;
+	
+		// Delivers 1600px wide image that covers tablets, smaller desktops and iPad retina displays
+		@media all and (min-width: 34em) {
+			background: 
+				-webkit-linear-gradient( bottom, $white 20%, transparent),
+				url('#{$path-img}/hero1600.jpg') no-repeat center/auto 100% $white
+			;
+			background: 
+				linear-gradient( 0deg, $white 20%, transparent),
+				url('#{$path-img}/hero1600.jpg') no-repeat center/auto 100% $white
+			;
+		}
+		
+		// Delivers 3000px wide image that covers MacBook Pro retina displays and larger desktops
+		@media all and (min-width: 90em) {
+			background: 
+				-webkit-linear-gradient( bottom, $white 20%, transparent),
+				url('#{$path-img}/hero3000.jpg') no-repeat center/auto 100% $white
+			;
+			background: 
+				linear-gradient( 0deg, $white 20%, transparent),
+				url('#{$path-img}/hero3000.jpg') no-repeat center/auto 100% $white
+			;
+		}
 }
 
 .container--hero--text {
