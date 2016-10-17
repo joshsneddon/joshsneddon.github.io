@@ -4,7 +4,7 @@
 
 .container {
 	height: 100%;
-	padding: 20px;
+	padding: 3em $base-container-padding;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -55,34 +55,20 @@
 }
 
 .container--hero--text {
-	padding: 20px 30px;
+	padding: $base-container-padding;
 	
 		& > h1 {
 			color: $primary;
 		}
 		
 		& > p {
-			color: $black;
-		}
-		
-		@media all and (min-width: 46em) {
-			
-			& > p {
-				font-size: 1.125em;
-			}	
+			color: $secondary;
+			font-size: 1.125em;
 		}
 }
 
 .container--card {
-	padding: 0 20px;
-	
-		& > h3 {
-			margin: 20px 0 12px;
-		}
-}
-
-.container--icn {
-	margin-bottom: 1.5em;
+	padding: $base-container-padding;
 }
 
 // Flexbox Containers

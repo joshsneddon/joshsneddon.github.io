@@ -3,15 +3,4 @@
 //================================================
 
 
-// Calculate em values
-
-@function em($target, $context: $base-font-size) {
-	@return ($target / $context) * 1em;
-}
-
-// Set the "context" width for the grid
-    
-@function grid-context($grid__col--width, $grid__col--count, $grid__gutter--width) {
-	$grid-context: ($grid__col--width * $grid__col--count) + ($grid__gutter--width * ($grid__col--count - 1));
-	@return $grid-context;
-}
+// Hmmm...

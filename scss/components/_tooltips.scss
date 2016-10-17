@@ -34,15 +34,15 @@
 		
 		&::after {
 			content: attr(data-tip);
-			font-size: 0.8em;
+			font-size: 14px;
 			font-weight: 700;
 			background: $white;
-			border-radius: em(2);
+			border-radius: .125em;
 			top: 150%;
 			color: $base-font-color;
-			width: 12em;
-			padding: em(8) em(10);
-			margin-left: -6.5em;
+			width: 13em;
+			padding: .5em .625em;
+			margin-left: -7em;
 		}
 		
 		// Displays tooltips at desktop screen widths, they are hidden on mobile/tablet

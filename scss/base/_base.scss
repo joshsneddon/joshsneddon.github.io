@@ -13,6 +13,14 @@ html {
 
 body {
 	@include text;
+	
+		@media all and (min-width: $breakpoint-med) {
+			font-size: 18px;
+		}
+		
+		@media all and (min-width: $breakpoint-lge) {
+			font-size: 20px;
+		}
 }
 
 h1, h2, h3, h4 {
@@ -22,9 +30,9 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 3.5em;
 	line-height: 1.1;
-	margin: 0.15em 0;
+	margin: 0 0 .2em;
 	
 		@media all and (min-width: $breakpoint-sml) {
 			font-size: 5.5em;
@@ -34,11 +42,13 @@ h1 {
 h2 {
 	font-size: 1.953em;
 	line-height: 1.2;
+	margin: 0 0 .8em;
 }
 
 h3 {
 	font-size: 1.563em;
 	line-height: 1.3;
+	margin: 0 0 .5em;
 }
 
 h4 {
