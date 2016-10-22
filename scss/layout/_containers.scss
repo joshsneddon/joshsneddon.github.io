@@ -4,9 +4,13 @@
 
 .container {
 	height: 100%;
-	padding: 3em $base-container-padding;
+	padding: 3rem $base-container-padding;
 	margin: 0 auto;
 	text-align: center;
+	
+		@media all and (min-width: $breakpoint-med) {
+			font-size: 1.125em;
+		}
 }
 
 .container--text {
