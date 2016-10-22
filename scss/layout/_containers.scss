@@ -3,25 +3,24 @@
 //================================================
 
 .container {
-	height: 100%;
-	padding: 3rem $base-container-padding;
-	margin: 0 auto;
-	text-align: center;
+	@include container($padding: 3rem $base-container-padding);
 	
-		@media all and (min-width: $breakpoint-med) {
-			font-size: 1.125em;
+	@media all and (min-width: $breakpoint-med) {
+		font-size: 1.125em;
+	}
+	
+		&--text {
+			@extend .container;
+			max-width: 37.5em;
 		}
 }
 
-.container--text {
-	@extend .container;
-	max-width: 37.5em;
-}
-
 .container--hero {
+	@extend .container;
 	position: relative;
 	height: 1000px;
 	height: 100vh;
+	padding: 0;
 	z-index: 1;
 	background: 
 		-webkit-linear-gradient( bottom, $white 20%, transparent),
@@ -33,7 +32,7 @@
 	;
 	color: $white;
 	
-		// Delivers 1600px wide image that covers tablets, smaller desktops and iPad retina displays
+		// Delivers 1600px wide image for tablets, smaller desktops and iPad retina displays
 		@media all and (min-width: 34em) {
 			background: 
 				-webkit-linear-gradient( bottom, $white 20%, transparent),
@@ -45,7 +44,7 @@
 			;
 		}
 		
-		// Delivers 3000px wide image that covers MacBook Pro retina displays and larger desktops
+		// Delivers 3000px wide image for MacBook Pro retina displays and larger desktops
 		@media all and (min-width: 90em) {
 			background: 
 				-webkit-linear-gradient( bottom, $white 20%, transparent),
@@ -90,6 +89,7 @@
 }
 
 .flex-bottom-vertically {
+	height: 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

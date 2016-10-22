@@ -17,3 +17,14 @@ $color: $base-font-color) {
 	line-height: $l-height;
 	color: $color;
 }
+
+// Container
+
+@mixin container(
+$margin: $base-container-margin,
+$padding: $base-container-padding,
+$align: $base-container-alignment) {
+	margin: $margin;
+	padding: $padding;
+	text-align: $align;
+}

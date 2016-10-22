@@ -28,9 +28,11 @@ $base-font-weight : 400;
 $base-l-height    : 1.5;
 $base-font-color  : $grey-dark;
 
-// Base Padding
+// Container Mixin
 
-$base-container-padding : 1.25rem;
+$base-container-padding   : 1.25rem;
+$base-container-margin    : 0 auto;
+$base-container-alignment : center;
 
 // Asset Paths
 
